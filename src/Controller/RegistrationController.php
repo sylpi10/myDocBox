@@ -31,7 +31,7 @@ class RegistrationController extends AbstractController
                     $form->get('plainPassword')->getData()
                 )
             );
-
+        
             $entityManager->persist($user);
             $entityManager->flush();
             // do anything else you need here, like send an email
@@ -41,10 +41,25 @@ class RegistrationController extends AbstractController
                 $authenticator,
                 $request
             );
+        
         }
 
         return $this->render('registration/register.html.twig', [
             'registrationForm' => $form->createView(),
         ]);
+        
     }
+    
+   
 }
+
+
+//  #[Route('/verify/email', name: 'app_verify_email')]
+// public function verifyUserEmail(): Response
+// {
+//     if($this->getUser()){
+//         return $this->redirectToRoute('user_session');
+//     }
+
+    
+// }

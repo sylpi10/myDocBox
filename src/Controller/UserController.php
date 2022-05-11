@@ -9,10 +9,18 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\UserRepository;
+use Doctrine\ORM\EntityManagerInterface;
 
 
 class UserController extends AbstractController
 {
+    private $manager;
+    
+    public function __construct(EntityManagerInterface $entityManager){
+      
+        $this->manager =$entityManager;
+
+    }
     #[Route('/user', name: 'app_user')]
     public function index(): Response
     {
@@ -21,12 +29,12 @@ class UserController extends AbstractController
         ]);
     }
 
-    #[Route('/user/{id}', name: 'user_session')]
-    public function userSession($id, UserRepository $userRepository): Response
+    #[Route('/user', name: 'user_session')]
+    public function userSession(): Response
     {
-        $user = $userRepository->find($id);
-        return $this->render('user/show.html.twig', [
-            'user' => $user,
-        ]);
+        return $this->render('user/show.html.twig', 
+            array('user' => $this->getUser())
+        );
+        
     }
 }
