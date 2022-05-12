@@ -28,6 +28,7 @@ class UserController extends AbstractController
 
         $this->manager = $entityManager;
         $this->folderRepository = $folderRepository;
+
     }
     #[Route('/user', name: 'app_user')]
     public function index(Request $request): Response

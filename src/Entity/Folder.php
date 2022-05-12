@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\FolderRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Form\FormTypeInterface;
 
 #[ORM\Entity(repositoryClass: FolderRepository::class)]
 class Folder
