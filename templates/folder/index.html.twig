@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello FolderController!{% endblock %}
+{% block title %}Hello{% endblock %}
 
 {% block body %}
 <style>
@@ -15,9 +15,9 @@
 <h2>Creer un dossier</h2>
 {{ form_start(form) }}
   <div class="form__field">{{ form_row(form.name) }}</div>
-  <div class="form__field">{{ form_row(form.tag) }}</div>
-  <div style="hidden" class="form__field">{{ form_row(form.createdAt) }}</div>
-  <div class="form__field">{{ form_row(form.updatedAt) }}</div>
-  <button class="form_button" type="submit">Soumettre le dossier</button>
+  <div style="margin: 1em;" class="form__field">{{ form_row(form.tag) }}</div>
+  <div style="visibility: hidden;" class="form__field">{{ form_row(form.createdAt) }}</div>
+  <div style="visibility: hidden;" class="form__field">{{ form_row(form.updatedAt) }}</div>
+  <button style="margin-bot: 6em; class="form_button" type="submit">Soumettre le dossier</button>
 {{ form_end(form) }}
 {% endblock %}
