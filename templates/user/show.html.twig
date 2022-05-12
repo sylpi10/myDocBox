@@ -8,5 +8,9 @@
             You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
         </div>
     {% endif %}
-     <h1 class="h3 mb-3 font-weight-normal">Bienvenue dans votre espace perso</h1>
+     <h1 class="h3 mb-3 font-weight-normal">Bienvenue sur votre espace perso</h1>
+     <a href="{{ path('new_folder') }}">
+     <div>Creer Dosssier</div>
+    </a>
+
 {% endblock %}
