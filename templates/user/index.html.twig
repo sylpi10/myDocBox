@@ -1,12 +1,37 @@
 {% extends 'base.html.twig' %}
-
+ {% block stylesheets %}
+           <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+ {% endblock %}
 {% block title %}Hello UserController!{% endblock %}
 
 {% block body %}
     {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
-        </div>
+    <header>
+    {# You are logged in as {{ app.user.userIdentifier }},  #}
+       <div class="logo"><h1>My Doc<span>Box</span></h1></div>
+       <nav><button> <a href="{{ path('app_logout') }}">je me déconnecte</a></button></nav>
+    </header>
     {% endif %}
-     <h1 class="h3 mb-3 font-weight-normal">Bienvenue sur votre espace perso</h1>
+    <main>
+        <div class="dashboard-title">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="content">
+          <div class="files-bloc">
+            <div class="title-files-bloc"><h3>Mes fichiers</h3></div>
+            <div class="btn-download-bloc">
+              <button>Je télécharge un fichier</button>
+            </div>
+            <div class="list-files"></div>
+          </div>
+          <div class="folders-bloc">
+            <div class="title-folders-bloc"><h3>Mes dossiers</h3></div>
+            <div class="btn-create-folder-bloc">
+              <button>Je crée un dossier</button>
+            </div>
+            <div class="list-folders"></div>
+          </div>
+        </div>
+       
+    </main>
 {% endblock %}

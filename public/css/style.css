@@ -1,0 +1,96 @@
+html,
+body {
+  margin: 0;
+}
+body {
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  display: flex;
+}
+
+.logo {
+  width: 18%;
+  color: #61c6e3;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+span {
+  background-color: #61c6e3;
+  color: white;
+  padding: 10px 0 10px;
+}
+nav {
+  width: 82%;
+  background: #61c6e3;
+  padding-top: 20px;
+  padding-right: 15px;
+  text-align: right;
+}
+nav > button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #61c6e3;
+  cursor: pointer;
+}
+nav > button > a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.dashboard-title {
+  padding: 60px 0 40px;
+  text-align: center;
+  color: #61c6e3;
+  font-size: 30px;
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  padding: 0 20px 50px;
+}
+
+.title-files-bloc,
+.title-folders-bloc,
+.btn-download-bloc,
+.btn-create-folder-bloc {
+  text-align: center;
+}
+.title-files-bloc,
+.title-folders-bloc {
+  border-bottom: 2px solid #61c6e3;
+  padding: 10px 0 10px;
+  color: #61c6e3;
+  width: 70%;
+  margin: auto;
+}
+
+.btn-download-bloc,
+.btn-create-folder-bloc {
+  padding: 15px 0 15px;
+}
+
+.btn-download-bloc > button,
+.btn-create-folder-bloc > button {
+  padding: 10px 0 10px;
+  width: 70%;
+  background: #61c6e3;
+  border: none;
+  outline: none;
+  box-shadow: 1px 1px 1px 1px rgba(139, 139, 139, 0.3);
+  border-radius: 5px;
+  color: white;
+}
+
+.list-files,
+.list-folders {
+  border-left: 1px solid#61c6e3;
+  border-right: 1px solid #61c6e3;
+  border-top: 1px solid #61c6e3;
+  border-bottom: 1px solid #61c6e3;
+  height: 300px;
+}

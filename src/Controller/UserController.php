@@ -14,7 +14,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class UserController extends AbstractController
 {
-    private $manager;
+  
     
     public function __construct(EntityManagerInterface $entityManager){
       
